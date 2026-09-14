@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noblex | Creación de Páginas Web Profesionales</title>
+  <meta name="description" content="Diseño y desarrollo de páginas web modernas, rápidas y que consiguen clientes para negocios y emprendedores. Escríbeme y cotiza tu web." />
+
+  <!-- Favicon Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+            },
+            cyanAccent: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+            },
+            emeraldAccent: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            },
+            amberAccent: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-[#030712] text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white relative overflow-x-hidden min-h-screen">
+
+  <!-- Background decorative glowing lights with rich colors -->
+  <div class="glow-spot-indigo top-0 left-1/4"></div>
+  <div class="glow-spot-cyan top-40 right-10"></div>
+  <div class="glow-spot-emerald top-[800px] left-10"></div>
+  <div class="glow-spot-magenta top-[1600px] right-10"></div>
+  <div class="glow-spot-indigo bottom-40 left-1/3"></div>
+
+  <!-- Subtle mesh grid pattern -->
+  <div class="fixed inset-0 bg-[linear-gradient(to_right,#1f29370f_1px,transparent_1px),linear-gradient(to_bottom,#1f29370f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none -z-10"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#030712]/85 border-b border-slate-800/80 transition-all duration-300 shadow-lg shadow-black/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-cyan-500 to-emerald-400 p-[1.5px] shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-[#030712] rounded-[10px] flex items-center justify-center font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-300 text-base">
+            &lt;/&gt;
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-base tracking-tight text-white group-hover:text-indigo-400 transition-colors">
+            Noblex<span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">.dev</span>
+          </span>
+          <span class="text-[10px] text-slate-400 font-semibold tracking-wider uppercase">Páginas Web</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#sobre-mi" class="hover:text-cyan-400 transition-colors py-1">Sobre Mí</a>
+        <a href="#proyectos" class="hover:text-cyan-400 transition-colors py-1">Proyectos</a>
+        <a href="#servicios" class="hover:text-cyan-400 transition-colors py-1">Servicios</a>
+        <a href="#contacto" class="hover:text-cyan-400 transition-colors py-1">Contacto</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="mailto:alejosaboredo4@gmail.com?subject=Consulta%20por%20P%C3%A1gina%20Web%20-%20Noblex.dev&body=Hola%20Noblex,%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web..." class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-bold text-white rounded-xl group bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 shadow-md shadow-indigo-500/25 hover:shadow-indigo-500/50 hover:scale-105 transition-all">
+          <span class="relative px-4 py-2 transition-all ease-in duration-75 bg-[#0b1329] rounded-[10px] group-hover:bg-opacity-0 flex items-center gap-1.5">
+            <i data-lucide="mail" class="w-4 h-4 text-cyan-400 group-hover:text-white transition-colors"></i>
+            Enviar Email
+          </span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" aria-label="Abrir menú" class="md:hidden p-2 text-slate-300 hover:text-white rounded-xl hover:bg-slate-800/80 border border-slate-800">
+        <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pt-2 pb-6 bg-[#030712]/95 border-b border-slate-800 space-y-2">
+      <a href="#sobre-mi" class="block px-4 py-2.5 rounded-xl text-slate-300 hover:bg-slate-800/80 font-medium mobile-nav-link">Sobre Mí</a>
+      <a href="#proyectos" class="block px-4 py-2.5 rounded-xl text-slate-300 hover:bg-slate-800/80 font-medium mobile-nav-link">Proyectos</a>
+      <a href="#servicios" class="block px-4 py-2.5 rounded-xl text-slate-300 hover:bg-slate-800/80 font-medium mobile-nav-link">Servicios</a>
+      <a href="#contacto" class="block px-4 py-2.5 rounded-xl text-slate-300 hover:bg-slate-800/80 font-medium mobile-nav-link">Contacto</a>
+      <div class="pt-2">
+        <a href="mailto:alejosaboredo4@gmail.com?subject=Consulta%20por%20P%C3%A1gina%20Web%20-%20Noblex.dev" class="w-full text-center block py-3 px-4 rounded-xl bg-gradient-to-r from-indigo-500 to-cyan-500 text-white font-bold text-sm shadow-lg shadow-indigo-500/30 mobile-nav-link">
+          Escríbeme por Correo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-28 py-12 md:py-20 relative z-10">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="text-center relative pt-4 md:pt-8 reveal-on-scroll">
+      
+      <!-- Status Badge with emerald radar ring -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-emerald-500/40 bg-emerald-950/40 text-emerald-400 text-xs font-bold mb-8 shadow-lg shadow-emerald-950/50">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        🟢 Disponible para nuevos proyectos
+      </div>
+
+      <!-- Main Headline with vivid gradient -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] max-w-4xl mx-auto">
+        Diseño y desarrollo <br class="hidden sm:inline"/>
+        <span class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-emerald-400 bg-clip-text text-transparent drop-shadow-sm">
+          páginas web para tu negocio
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-6 text-base sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
+        Atrae nuevos clientes, transmite confianza profesional y recibe consultas y presupuestos directamente en tu <span class="text-cyan-400 font-semibold">Correo Electrónico</span>.
+      </p>
+
+      <!-- CTA Buttons with glowing colors -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contacto" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 text-white font-extrabold text-sm shadow-xl shadow-indigo-500/30 hover:shadow-indigo-500/60 hover:scale-105 transition-all">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          Pedir Cotización por Correo
+        </a>
+        <a href="#proyectos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl border border-slate-700 bg-slate-900/80 hover:bg-slate-800 text-slate-200 font-bold text-sm transition-all hover:border-indigo-500 shadow-md shadow-black/40">
+          <i data-lucide="folder-git-2" class="w-5 h-5 text-indigo-400"></i>
+          Ver Trabajos Realizados
+        </a>
+      </div>
+
+      <!-- Feature cards grid with colorful accents -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
+        
+        <div class="p-4 rounded-2xl bg-gradient-to-b from-indigo-950/30 to-slate-900/60 border border-indigo-500/20 backdrop-blur-sm hover:border-indigo-500/50 transition-all group">
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="smartphone" class="w-4 h-4"></i>
+          </div>
+          <p class="text-xs text-slate-400 font-medium">Adaptable</p>
+          <p class="text-sm font-extrabold text-white mt-0.5">100% Celulares y PC</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-b from-cyan-950/30 to-slate-900/60 border border-cyan-500/20 backdrop-blur-sm hover:border-cyan-500/50 transition-all group">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+          </div>
+          <p class="text-xs text-slate-400 font-medium">Rendimiento</p>
+          <p class="text-sm font-extrabold text-white mt-0.5">Carga Ultrarrápida</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-b from-purple-950/30 to-slate-900/60 border border-purple-500/20 backdrop-blur-sm hover:border-purple-500/50 transition-all group">
+          <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+          </div>
+          <p class="text-xs text-slate-400 font-medium">Contacto</p>
+          <p class="text-sm font-extrabold text-white mt-0.5">Vía Email Directo</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-b from-amber-950/30 to-slate-900/60 border border-amber-500/20 backdrop-blur-sm hover:border-amber-500/50 transition-all group">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+          </div>
+          <p class="text-xs text-slate-400 font-medium">Publicación</p>
+          <p class="text-sm font-extrabold text-white mt-0.5">Listo en Internet</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN: SOBRE MÍ ================= -->
+    <section id="sobre-mi" class="relative reveal-on-scroll">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-xs uppercase tracking-widest text-indigo-400 font-extrabold">
+          Conóceme
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Sobre Mí</h2>
+        <p class="text-slate-400 text-sm mt-2">Hola, soy Noblex. Me especializo en diseñar y programar páginas web funcionales y atractivas.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Profile Card with colorful gradient border -->
+        <div class="lg:col-span-5 relative group">
+          <div class="gradient-border-card p-6 sm:p-8 space-y-6">
+            
+            <div class="flex items-center gap-4">
+              <!-- Avatar icon with gradient -->
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 via-cyan-500 to-emerald-400 flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-indigo-500/30">
+                <i data-lucide="code-2" class="w-8 h-8"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                  Noblex
+                  <i data-lucide="badge-check" class="w-5 h-5 text-cyan-400"></i>
+                </h3>
+                <p class="text-xs text-indigo-300 font-semibold">Desarrollador Web Freelance</p>
+                <div class="flex items-center gap-1.5 mt-1 text-xs text-emerald-400 font-medium">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>Entrega rápida y atención directa</span>
+                </div>
+              </div>
+            </div>
+
+            <hr class="border-slate-800" />
+
+            <div class="space-y-3 text-sm text-slate-300">
+              <div class="flex items-center justify-between py-1 border-b border-slate-800/60 pb-2">
+                <span class="text-slate-400 flex items-center gap-2"><i data-lucide="layers" class="w-4 h-4 text-indigo-400"></i> Especialidad:</span>
+                <span class="font-bold text-white">Landing Pages & Catálogos</span>
+              </div>
+              <div class="flex items-center justify-between py-1 border-b border-slate-800/60 pb-2">
+                <span class="text-slate-400 flex items-center gap-2"><i data-lucide="sparkles" class="w-4 h-4 text-emerald-400"></i> Disponibilidad:</span>
+                <span class="font-bold text-emerald-400">Inmediata / Freelance</span>
+              </div>
+              <div class="flex items-center justify-between py-1">
+                <span class="text-slate-400 flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-cyan-400"></i> Email:</span>
+                <span class="font-bold text-cyan-300 text-xs sm:text-sm">alejosaboredo4@gmail.com</span>
+              </div>
+            </div>
+
+            <!-- Skills pills with colors -->
+            <div class="pt-2">
+              <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">Tecnologías que manejo:</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-indigo-950/80 text-indigo-300 border border-indigo-700/60">HTML5</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-cyan-950/80 text-cyan-300 border border-cyan-700/60">CSS3 / Tailwind</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-950/80 text-amber-300 border border-amber-700/60">JavaScript</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-950/80 text-emerald-300 border border-emerald-700/60">Diseño Responsivo</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-pink-950/80 text-pink-300 border border-pink-700/60">Netlify / Vercel</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bio text & Philosophy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 text-cyan-400 text-sm font-bold">
+            <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
+            ¿Por qué crear tu página conmigo?
+          </div>
+          
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white leading-snug">
+            Creo sitios web que se ven geniales y están pensados para que tus clientes te elijan.
+          </h3>
+          
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Hoy en día, cuando una persona busca un producto o servicio, lo primero que hace es mirar en su teléfono. Si tu negocio no tiene una página web o es lenta y confusa, pierdes clientes frente a la competencia.
+          </p>
+          
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Mi objetivo es darte una web <strong class="text-white">rápida, moderna y sencilla</strong> para que tus clientes vean quién eres, qué ofreces y te contacten con solo tocar un botón. Me encargo de todo el proceso de inicio a fin.
+          </p>
+
+          <!-- Highlights cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/70 border border-indigo-500/20 hover:border-indigo-500/40 transition-colors">
+              <div class="p-2.5 rounded-xl bg-indigo-500/20 text-indigo-400 shrink-0">
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">Diseño a Medida</h4>
+                <p class="text-xs text-slate-400 mt-0.5">Adaptado a la identidad de tu marca y con los colores que elijas.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-4 rounded-2xl bg-slate-900/70 border border-cyan-500/20 hover:border-cyan-500/40 transition-colors">
+              <div class="p-2.5 rounded-xl bg-cyan-500/20 text-cyan-400 shrink-0">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-white">Soporte Continuo</h4>
+                <p class="text-xs text-slate-400 mt-0.5">Cualquier cambio o actualización lo resolvemos de inmediato.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN: PROYECTOS / LAS QUE HICE ================= -->
+    <section id="proyectos" class="relative reveal-on-scroll">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs uppercase tracking-widest text-cyan-400 font-extrabold">
+          Portafolio
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Mis Trabajos Realizados</h2>
+        <p class="text-slate-400 text-sm mt-2">Conoce ejemplos reales de sitios desarrollados y publicados en internet.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- PROYECTO 1: UNIFORMA2 (Destacado en Azul/Índigo/Verde) -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-indigo-500/30 hover:border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/20 flex flex-col justify-between group">
+          <div>
+            
+            <!-- Browser Top Mockup Header -->
+            <div class="bg-[#0b1329] px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+              <div class="flex items-center gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+              </div>
+              <div class="px-3.5 py-1 rounded-lg bg-[#030712] text-xs text-indigo-300 font-mono flex items-center gap-1.5 border border-slate-800">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
+                uniforma2.vercel.app
+              </div>
+              <div class="w-6"></div>
+            </div>
+
+            <!-- Project Banner Graphic / Mockup -->
+            <div class="h-60 bg-gradient-to-br from-indigo-950/90 via-slate-900 to-[#030712] relative flex items-center justify-center p-6 border-b border-slate-800 overflow-hidden group-hover:scale-[1.01] transition-transform">
+              <div class="absolute inset-0 bg-[radial-gradient(#6366f1_1.5px,transparent_1.5px)] [background-size:20px_20px] opacity-25"></div>
+              
+              <!-- Visual emblem -->
+              <div class="text-center z-10 space-y-2.5">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-cyan-400 flex items-center justify-center text-white shadow-xl shadow-indigo-500/40 group-hover:scale-110 transition-transform">
+                  <i data-lucide="shopping-bag" class="w-8 h-8"></i>
+                </div>
+                <h4 class="text-xl font-extrabold text-white tracking-wider">UNIFORMA2</h4>
+                <p class="text-xs text-cyan-300 font-semibold max-w-xs mx-auto">Tienda de Ropa • Gorros • Ropa Deportiva • Tazas Sublimadas</p>
+              </div>
+
+              <!-- Badge Live -->
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Sitio en vivo
+              </span>
+            </div>
+
+            <!-- Project Description -->
+            <div class="p-6 sm:p-7 space-y-4">
+              <div>
+                <h3 class="text-2xl font-black text-white group-hover:text-cyan-300 transition-colors">Uniforma2</h3>
+                <p class="text-xs text-indigo-300 font-medium mt-1">Tienda online y catálogo de indumentaria, sublimación y accesorios.</p>
+              </div>
+
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Sitio web desarrollado para exhibir colecciones de <strong class="text-white">ropa casual y de trabajo</strong>, <strong class="text-white">indumentaria deportiva</strong>, <strong class="text-white">gorros personalizados</strong> y <strong class="text-white">tazas sublimadas</strong>, con interfaz rápida y adaptada para que los clientes consulten stock y precios por WhatsApp.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-indigo-950 text-indigo-300 border border-indigo-700 flex items-center gap-1">
+                  <i data-lucide="shirt" class="w-3.5 h-3.5"></i> Ropa & Uniformes
+                </span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-cyan-950 text-cyan-300 border border-cyan-700 flex items-center gap-1">
+                  <i data-lucide="trophy" class="w-3.5 h-3.5"></i> Ropa Deportiva
+                </span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-purple-950 text-purple-300 border border-purple-700 flex items-center gap-1">
+                  <i data-lucide="coffee" class="w-3.5 h-3.5"></i> Tazas & Sublimados
+                </span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-700 flex items-center gap-1">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i> Vercel
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="p-6 sm:p-7 pt-0">
+            <a href="https://uniforma2.vercel.app/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-extrabold text-sm transition-all shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:scale-[1.02]">
+              <span>Visitar uniforma2.vercel.app</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- PROYECTO 2: EDUDOCENTE (Destacado en Cyan/Teal/Emerald) -->
+        <div class="glass-card rounded-2xl overflow-hidden border border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 flex flex-col justify-between group">
+          <div>
+            
+            <!-- Browser Top Mockup Header -->
+            <div class="bg-[#0b1329] px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+              <div class="flex items-center gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+              </div>
+              <div class="px-3.5 py-1 rounded-lg bg-[#030712] text-xs text-cyan-300 font-mono flex items-center gap-1.5 border border-slate-800">
+                <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
+                edudocente-para-profes.vercel.app
+              </div>
+              <div class="w-6"></div>
+            </div>
+
+            <!-- Project Banner Graphic -->
+            <div class="h-60 bg-gradient-to-br from-cyan-950/90 via-slate-900 to-[#030712] relative flex items-center justify-center p-6 border-b border-slate-800 overflow-hidden group-hover:scale-[1.01] transition-transform">
+              <div class="absolute inset-0 bg-[radial-gradient(#06b6d4_1.5px,transparent_1.5px)] [background-size:20px_20px] opacity-25"></div>
+              
+              <div class="text-center z-10 space-y-2.5">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-cyan-500 via-teal-500 to-emerald-400 flex items-center justify-center text-white shadow-xl shadow-cyan-500/40 group-hover:scale-110 transition-transform">
+                  <i data-lucide="graduation-cap" class="w-8 h-8"></i>
+                </div>
+                <h4 class="text-xl font-extrabold text-white tracking-wider">EDUDOCENTE</h4>
+                <p class="text-xs text-emerald-300 font-semibold max-w-xs mx-auto">Gestión Escolar • Asistencias • Calificaciones • Exámenes</p>
+              </div>
+
+              <!-- Badge Live -->
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Sitio en vivo
+              </span>
+            </div>
+
+            <!-- Project Description -->
+            <div class="p-6 sm:p-7 space-y-4">
+              <div>
+                <h3 class="text-2xl font-black text-white group-hover:text-cyan-300 transition-colors">EduDocente</h3>
+                <p class="text-xs text-cyan-300 font-medium mt-1">Plataforma web para docentes y gestión educativa.</p>
+              </div>
+
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Herramienta web desarrollada para profesores que permite <strong class="text-white">tomar y controlar asistencias</strong>, <strong class="text-white">clasificar y calificar exámenes</strong>, gestionar alumnos y llevar un control pedagógico completo de forma ágil desde el celular o computadora.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-cyan-950 text-cyan-300 border border-cyan-700 flex items-center gap-1">
+                  <i data-lucide="clipboard-check" class="w-3.5 h-3.5"></i> Control de Asistencias
+                </span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-emerald-950 text-emerald-300 border border-emerald-700 flex items-center gap-1">
+                  <i data-lucide="award" class="w-3.5 h-3.5"></i> Calificación de Exámenes
+                </span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-indigo-950 text-indigo-300 border border-indigo-700 flex items-center gap-1">
+                  <i data-lucide="users" class="w-3.5 h-3.5"></i> Gestión de Alumnos
+                </span>
+                <span class="px-2.5 py-1 rounded-md text-xs font-bold bg-slate-800 text-slate-300 border border-slate-700 flex items-center gap-1">
+                  <i data-lucide="check" class="w-3.5 h-3.5"></i> Vercel
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="p-6 sm:p-7 pt-0">
+            <a href="https://edudocente-para-profes.vercel.app" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-500 hover:to-emerald-500 text-white font-extrabold text-sm transition-all shadow-lg shadow-cyan-600/30 hover:shadow-cyan-600/50 hover:scale-[1.02]">
+              <span>Visitar edudocente-para-profes.vercel.app</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN: SERVICIOS ================= -->
+    <section id="servicios" class="relative reveal-on-scroll">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs uppercase tracking-widest text-emerald-400 font-extrabold">
+          Servicios
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">¿Qué tipo de páginas desarrollo?</h2>
+        <p class="text-slate-400 text-sm mt-2">Soluciones completas según el objetivo de tu emprendimiento.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Servicio 1: Landing Pages -->
+        <div class="p-6 rounded-2xl bg-gradient-to-b from-indigo-950/40 to-slate-900 border border-indigo-500/30 hover:border-indigo-400 transition-all hover:-translate-y-1 space-y-4 shadow-lg">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center shadow-md shadow-indigo-500/20">
+            <i data-lucide="sparkle" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Landing Pages</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Páginas de una sola sección enfocadas en vender un producto o servicio específico, captar leads y cerrar ventas por WhatsApp.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-3 border-t border-slate-800 font-medium">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Botón directo a WhatsApp</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Sección de testimonios y precios</li>
+          </ul>
+        </div>
+
+        <!-- Servicio 2: Sitios para Negocios (Destacado) -->
+        <div class="p-6 rounded-2xl bg-gradient-to-b from-cyan-950/40 to-slate-900 border border-cyan-500/40 relative space-y-4 hover:-translate-y-1 transition-all shadow-xl shadow-cyan-950/50">
+          <span class="absolute -top-3 right-4 px-3 py-0.5 rounded-full text-[11px] font-black bg-gradient-to-r from-cyan-500 to-indigo-500 text-white shadow-md">
+            ⭐ Más solicitado
+          </span>
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center shadow-md shadow-cyan-500/20">
+            <i data-lucide="briefcase" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Sitios para Negocios / Pymes</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Presencia digital profesional con información de la empresa, servicios, galería fotográfica, ubicación en Google Maps y contacto.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-3 border-t border-slate-800 font-medium">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Diseño corporativo elegante</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 100% Adaptado a celulares y tablets</li>
+          </ul>
+        </div>
+
+        <!-- Servicio 3: Catálogos Online -->
+        <div class="p-6 rounded-2xl bg-gradient-to-b from-emerald-950/40 to-slate-900 border border-emerald-500/30 hover:border-emerald-400 transition-all hover:-translate-y-1 space-y-4 shadow-lg">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shadow-md shadow-emerald-500/20">
+            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white">Catálogos & Tiendas Digitales</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Muestra tus productos (ropa, gorros, indumentaria deportiva o tazas sublimadas como en Uniforma2) con fotos, detalles y pedidos directos por WhatsApp.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 pt-3 border-t border-slate-800 font-medium">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Muestrario de productos ordenado</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Botón de consulta rápida por artículo</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECCIÓN: CONTACTO ================= -->
+    <section id="contacto" class="relative reveal-on-scroll">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs uppercase tracking-widest text-cyan-400 font-extrabold">
+          ¡Hablemos hoy!
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Contáctame</h2>
+        <p class="text-slate-400 text-sm mt-2">Escríbeme para coordinar tu página web o pedir un presupuesto personalizado sin costo.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Tarjeta de Opciones Rápidas de Contacto -->
+        <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+
+            <!-- Email Direct Card (Principal y Destacada) -->
+            <a href="mailto:alejosaboredo4@gmail.com?subject=Consulta%20por%20P%C3%A1gina%20Web%20-%20Noblex.dev&body=Hola%20Noblex,%20te%20escribo%20porque%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio..." class="group block p-6 rounded-2xl bg-gradient-to-r from-indigo-950/70 via-slate-900 to-[#0b1329] border border-indigo-500/50 hover:border-cyan-400 transition-all hover:scale-[1.02] shadow-xl shadow-indigo-950/40">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg shadow-indigo-500/30">
+                  <i data-lucide="mail" class="w-7 h-7"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider">Canal Oficial de Contacto</span>
+                  <h4 class="text-lg font-extrabold text-white">Envíame un Correo</h4>
+                  <p class="text-xs sm:text-sm text-indigo-300 font-semibold mt-0.5">alejosaboredo4@gmail.com</p>
+                </div>
+              </div>
+            </a>
+
+            <!-- Guarantees box -->
+            <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-3 shadow-md">
+              <h5 class="text-sm font-extrabold text-white flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400"></i>
+                ¿Qué incluye tu página web?
+              </h5>
+              <ul class="text-xs text-slate-300 space-y-2 pl-2">
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i> <span>Diseño visual moderno adaptado a tu rubro.</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i> <span>Visualización óptima en celulares y computadoras.</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i> <span>Formularios y canales de consulta directa a tu correo.</span></li>
+                <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 shrink-0"></i> <span>Alojamiento y publicación en internet (Vercel/Netlify).</span></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Contact badge info -->
+          <div class="p-4 rounded-xl bg-indigo-950/40 border border-indigo-500/30 text-xs text-cyan-300 flex items-center gap-2.5">
+            <i data-lucide="zap" class="w-5 h-5 text-cyan-400 shrink-0"></i>
+            <span>¡Cotizaciones sin compromiso! Respondo tus dudas por correo a la brevedad.</span>
+          </div>
+        </div>
+
+        <!-- Formulario de Mensaje con Cotizador -->
+        <div class="lg:col-span-7">
+          <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-slate-900 to-[#0b1329] border border-slate-800 relative shadow-2xl">
+            <h3 class="text-2xl font-black text-white">Cuéntame sobre tu idea</h3>
+            <p class="text-xs text-slate-400 mt-1 mb-6">Completa este formulario y envíame tu consulta directamente por correo electrónico.</p>
+
+            <form id="contactForm" class="space-y-4">
+              <div>
+                <label for="userName" class="block text-xs font-bold text-slate-300 mb-1">Tu Nombre o Nombre de tu Negocio *</label>
+                <input type="text" id="userName" required placeholder="Ej. Carlos Martínez / Mi Empresa" class="w-full px-4 py-3 rounded-xl bg-[#030712] border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="projectType" class="block text-xs font-bold text-slate-300 mb-1">¿Qué tipo de web necesitas?</label>
+                  <select id="projectType" class="w-full px-4 py-3 rounded-xl bg-[#030712] border border-slate-800 text-white text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all">
+                    <option value="Landing Page (Página única de venta)">Landing Page (Página única de venta)</option>
+                    <option value="Sitio para Negocio / Pyme">Sitio Web para Negocio / Empresa</option>
+                    <option value="Catálogo de Productos">Catálogo de Productos / Tienda</option>
+                    <option value="Herramienta / Web App">Herramienta / Web App para Profesores/Negocios</option>
+                    <option value="Otro tipo de web">Otro / No estoy seguro</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="userContact" class="block text-xs font-bold text-slate-300 mb-1">Tu Correo Electrónico de Contacto *</label>
+                  <input type="email" id="userContact" placeholder="Ej. tu@correo.com" class="w-full px-4 py-3 rounded-xl bg-[#030712] border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all" />
+                </div>
+              </div>
+
+              <div>
+                <label for="userMessage" class="block text-xs font-bold text-slate-300 mb-1">Detalles de lo que te gustaría incluir</label>
+                <textarea id="userMessage" rows="3" placeholder="Ej. Quiero una página web para mostrar mis servicios, proyectos y recibir consultas de clientes..." class="w-full px-4 py-3 rounded-xl bg-[#030712] border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all resize-none"></textarea>
+              </div>
+
+              <div class="pt-3">
+                <button type="button" id="btnSendEmail" class="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 rounded-xl bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-extrabold text-base shadow-xl shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:scale-[1.01] transition-all">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                  Enviar Mensaje por Correo
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-slate-800/80 bg-[#030712] py-10 text-center text-xs text-slate-400 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-extrabold text-white text-sm">Noblex</span>
+        <span>— Creación de páginas web para negocios</span>
+      </div>
+      <div>
+        <p>&copy; <span id="yearSpan"></span> Noblex. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Email Button with glowing badge -->
+  <a id="floatingEmail" href="mailto:alejosaboredo4@gmail.com?subject=Consulta%20por%20P%C3%A1gina%20Web%20-%20Noblex.dev" class="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all group" aria-label="Contactar a Noblex por Correo">
+    <i data-lucide="mail" class="w-7 h-7"></i>
+    
+    <!-- Notification Dot (1) -->
+    <span class="absolute -top-1 -right-1 w-5 h-5 bg-cyan-400 text-slate-950 text-[10px] font-black rounded-full flex items-center justify-center border-2 border-[#030712] shadow-md">
+      ✉
+    </span>
+
+    <!-- Tooltip -->
+    <span class="absolute right-20 px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-2xl">
+      ¡Escríbeme por Correo! ✉️
+    </span>
+  </a>
+
+  <!-- Toast Notification Floating Widget -->
+  <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-2xl bg-slate-900/95 border border-indigo-500 text-white text-xs font-bold shadow-2xl backdrop-blur-md flex items-center gap-2.5 pointer-events-none">
+    <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i>
+    <span id="toastMessage">¡Abriendo tu cliente de correo!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
